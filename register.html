@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!--Fav Icons-->
+    <link href="assets/img/favicon.png" rel="icon" sizes="32*32">
+
+    <title>Register</title>
+
+    <!-- Template Main CSS File -->
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!--Footer social icon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/nav_bar.css">
+        <link href="css/style1.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/footer.css">
+
+    <!-- google recaptch-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+
+<body>
+<header>
+        <nav class="navbar navbar-expand-md navbar-dark ownbg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+                    <li class="nav-item"><a class="nav-link" href="academics.html"> Academics </a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html"> Research </a></li>
+                    <li class="nav-item"><a class="nav-link" href="placements.html"> Placements </a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="user_application.html"> Admissions </a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html"> Register </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<br>
+    <main id="main">
+
+        <section class="container-fluid frt_div">
+            <div class="row">
+                    <div class=" container-fluid col-lg">
+                        <img class="imageBox" style=" max-width: 100%" src="assets/img/Jain-logo.png" alt="First slide">
+                    </div>
+                    <div class="container-fluid col-lg">
+                        <img class="imageBox clg_img" style=" max-width: 100%;"
+                            src="assets/img/top-university-of-india4a.jpg" alt="First slide">
+                        </div>
+            </div>
+        </section>
+
+        <section class="snd_div">
+            <nav class="navbar justify-content-between snd_nav">
+                <form class="form-inline" id="snd_nav">
+                    <p>Already Applied? <a class="navbar-brand" id="log1" href="#" data-toggle="modal" data-target="#myModal"> Login</a></p>
+                </form>
+            </nav>
+        </section>
+
+       
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <img class="mb-4" src="assets/img/Jain-logo.png" alt="">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+        
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control inputform" id="email" placeholder="Enter email" name="email" style="text-align: left;">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control inputform" id="pwd" placeholder="Enter password" name="pswd" style="text-align: left;">
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary text-center">LogIn</button>
+                        </form>
+                    </div>
+        
+                   
+        
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal end -->
+        
+
+        <!-- third div-->
+
+        <section class="container-fluid trd_div">
+            <div class="row">
+                <div class="container-fluid col-lg-6 col-md-4">
+                    <h3>Admission 2020-2021</h3>
+                    <p>Our students are ambitious, and creative with a quest to know more. At Jain
+                        (Deemed-to-be University), we bring together the bright minds of today who
+                        will outline the innovations of tomorrow.</p>
+                    <div class="jumbotron">
+                        <button type="button" class="btn btn-primary adm_btn">Admissions 2021</button>
+                    </div>
+                </div>
+
+                <div class="container-fluid col-lg-4 col-md-6 col-sm-12 reg_div ">
+                    <h3>Registration</h3>
+                    <br>
+                    <form novalidate>
+                        <div>
+                        <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <select id="std_nationality" class="form-control " required style="border-color: rgb(16 16 16); color:black; line-height: 100px; height: 50px;">
+                                        <option value="0">Select Nationality</option>
+                                        <option value="a">A</option>
+                                        <option value="b">B</option>
+                                        <option value="c">C</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-lg inputform" id="std_name" placeholder="Student Name" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-lg inputform" id="std_email" placeholder="Email" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-lg inputform" id="std_mobile_number"
+                                    placeholder="Mobile Number" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control form-control-lg inputform" id="std_password1" placeholder="Password" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control form-control-lg inputform" id="std_confirm_password"
+                                    placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+                
+                        <div class="g-recaptcha" data-sitekey="6LebNxIaAAAAAH-F38cKmTCCFKGlTNuH_SKcvLsn"></div>
+                        <br />
+                        <div class="form-group row text-center">
+                            <div class="col-sm-10">
+                                <button type="button" class="btn btn-primary btn-lg reg_btn" id="std_register">Register</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                
+                </div>
+            </div>
+        </section>
+        <!-- third div end-->
+
+    </main><!-- End #main -->
+
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-contact">
+                    <h4>JGI Global Campus </h4>
+                    <p>
+
+                        Faculty of Engineering & Technology<br>
+                        45th km, NH - 209<br>
+                        Jakkasandra Post<br>
+                        Bangalore - Kanakapura Main Road<br>
+                        Ramanagara District - 562 112<br>
+
+                        <strong>Phone:</strong> +91 080-27577198<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>List of Programs</h4>
+                    <ul>
+
+                        <li><i class="bx bx-chevron-right"></i> <a href="#"> B-VOC - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BBA - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">PGDM - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">MBA - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Diploma - Real Estate</a></li>
+
+                    </ul>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+        <div class="mr-md-auto text-center text-md-left">
+            <div class="copyright">
+                &copy; Copyright <strong><span>IREU-Education</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+
+            </div>
+        </div>
+        <section id="lab_social_icon_footer">
+            <!-- Include Font Awesome Stylesheet in Header -->
+        
+        
+            <div class="my-auto text-md-right text-right">
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                        class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                        class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        
+        </section>
+    </div>
+</footer>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script>
+  
+  $(document).ready(function () {
+       $("#std_register").click(function () {
+           let std_nationality = $("#std_nationality").val();
+           let std_name = $("#std_name").val();
+           let std_email = $("#std_email").val();
+           let std_mobile_number = $("#std_mobile_number").val();
+           let std_password1 = $("#std_password1").val();
+           let std_confirm_password = $("#std_confirm_password").val();
+
+           if (std_nationality == "0" || std_name == "" || std_email == "" || std_mobile_number == "" || std_password1 == "" || std_confirm_password == "") {
+               alert("all required")
+           }
+       });
+
+   });
+   
+</script>
+</body>
+
+</html>

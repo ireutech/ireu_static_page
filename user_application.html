@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Fav Icons-->
+    <link href="assets/img/favicon.png" rel="icon" sizes="32*32">
+
+    <title>User application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/user_app.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        .mandate {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><a class="navbar-brand" href="#">
+                    <img src="assets/img/Jain-logo.png" alt="" width="130px">
+                </a> </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action sid_nav">New Application Form</a>
+                <a href="#" class="list-group-item list-group-item-action sid_nav">My Applications</a>
+                <a href="#" class="list-group-item list-group-item-action sid_nav">My Payments</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn " id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
+
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://jgigroup.org/juug/assets/img/avtar/student.jpg" alt="avtar-img"
+                                    width="20px">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Logout</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container py-3 my-3 border rounded shadow-sm">
+                <div class="row" style="margin-left: 15px; margin-right: 15px;">
+                    <section>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="nav-item">
+                                <a href="#step1" class="nav-link active" data-toggle="tab" aria-controls="step1" role="tab"
+                                    title="PROGRAM INFO" style="color: #374873;"> PROGRAM INFO</a>
+                            </li>
+                            <li role="presentation" class="nav-item">
+                                <a href="#step2" class="nav-link disabled" data-toggle="tab" aria-controls="step2" role="tab"
+                                    title="PERSONAL INFO" style="color: #374873;"> PERSONAL INFO </a>
+                            </li>
+                            <li role="presentation" class="nav-item">
+                                <a href="#step3" class="nav-link disabled" data-toggle="tab" aria-controls="step3" role="tab"
+                                    title="COMMUNICATION INFO" style="color: #374873;"> COMMUNICATION INFO </a>
+                            </li>
+                            <li role="presentation" class="nav-item">
+                                <a href="#step4" class="nav-link disabled" data-toggle="tab" aria-controls="step4" role="tab"
+                                    title="EDUCATIONAL INFO" style="color: #374873;"> EDUCATIONAL INFO </a>
+                            </li>
+                            <li role="presentation" class="nav-item">
+                                <a href="#step5" class="nav-link disabled" data-toggle="tab" aria-controls="step6" role="tab"
+                                    title="OTHER INFO" style="color: #374873;"> OTHER INFO </a>
+                            </li>
+                            <li role="presentation" class="nav-item">
+                                <a href="#complete" class="nav-link disabled" data-toggle="tab" aria-controls="complete" role="tab"
+                                    title="UPLOAD DOCS" style="color: #374873;"> UPLOAD DOCS </a>
+                            </li>
+                        </ul>
+                        <form role="form">
+                            <div class="tab-content py-2">
+                                <div class="tab-pane active" role="tabpanel" id="step1">
+                                    <h3> PROGRAM INFO</h3>
+                                    <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">PROGRAM TYPE<span class="mandate">*</span></label>
+                                                <select class="form-control" id="prg_type" required>
+                                                    <option value="0">Select Program Type</option>
+                                                    <option value="1">Ug
+                                                    </option>
+                                                    <option value="2">pg (Lateral
+                                                        Entry)</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">PROGRAM NAME<span class="mandate">*</span></label>
+                                                <select name="course_id" class="form-control" id="prg_name" required>
+                                                    <option value="0">Select Program
+                                                    Name</option>
+                                                    <option value="1">Ug
+                                                    </option>
+                                                    <option value="2">pg (Lateral
+                                                        Entry)</option>
+                                                </select>
+                                            
+                                            </div>
+                                          
+                                        </div>
+                                        <button type="button" id="first_next" class="btn btn-primary next-step float-right" >Next</button>
+                                 </div>
+                                <div class="tab-pane" role="tabpanel" id="step2">
+                                    <h3> PERSONAL INFO</h3>
+                                  
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="control-label">First Name </label>(As per
+                                                10th standard marks card) <span class="mandate">*</span>
+                                                <input type="text" name="fname" value="" class="form-control" id="first_name" required
+                                                    style="text-transform:uppercase" />
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="control-label">Last Name </label> <span class="mandate">*</span>
+                                                <input type="text" name="lname" value="" class="form-control" id="last_name" style="text-transform:uppercase" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Email <span class="mandate">*</span></label>
+                                                <input type="text" name="email" class="form-control" id="email" required />
+                                    
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Date of Birth <span class="mandate">*</span></label>
+                                                <input type="text" name="dob" value="" class="form-control dtpicker_dob" autocomplete="off" id="dob"
+                                                    placeholder="dd/mm/yyyy" required>
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Registered Mobile Number
+                                                    <span class="mandate">*</span></label>
+                                                <input type="text" name="mobile_no" value="" class="form-control" maxlength="10" id="mobile_number" required />
+                                    
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Alternative Mobile
+                                                    Number</label>
+                                                <input type="text" name="alt_mobile_no" value="" class="form-control" maxlength="10" />
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Gender <span class="mandate">*</span></label>
+                                                <select name="gender" class="form-control" id="gender" required>
+                                                    <option value="0">SELECT</option>
+                                                    <option value="1">MALE</option>
+                                                    <option value="2">FEMALE</option>
+                                                </select>
+                                    
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Religion <span class="mandate">*</span></label>
+                                                <select name="religion" class="form-control" id="religion" required>
+                                                    <option value="0">SELECT</option>
+                                                    <option value="1">HINDUISM</option>
+                                                    <option value="2">ISLAM</option>
+                                                    <option value="3">CHRISTIANITY</option>
+                                                    <option value="4">BUDDHISM</option>
+                                                    <option value="5">SIKHISM</option>
+                                                    <option value="6">JAINISM</option>
+                                                    <option value="7">OTHERS</option>
+                                                </select>
+                                            </div>
+                                    
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Caste</label>
+                                                <input type="text" name="caste" value="" class="form-control" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Category <span class="mandate">*</span></label>
+                                                <select name="category" class="form-control" id="category" required>
+                                                    <option value="0">CASTE CATEGORY</option>
+                                                    <option value="1">GENERAL</option>
+                                                    <option value="2">OBC</option>
+                                                    <option value="3">NT</option>
+                                                    <option value="4">SC</option>
+                                                    <option value="5">ST</option>
+                                                    <option value="6">BC</option>
+                                                    <option value="7">PWD</option>
+                                                    <option value="8">EWS</option>
+                                                    <option value="9">EBC</option>
+                                                    <option value="10">PC</option>
+                                                    <option value="11">WBC</option>
+                                                    <option value="12">UR</option>
+                                                    <option value="13">UR(GEN)</option>
+                                                    <option value="14">MOBC</option>
+                                                    <option value="15">STH</option>
+                                                    <option value="16">STP</option>
+                                                </select>
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Aadhar No</label>
+                                                <input type="text" name="aadhar_no" value="" class="form-control" maxlength="12"
+                                                    style="text-transform:uppercase" />
+                                                <em class="error help-block aadhar_no"></em>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Blood Group <span class="mandate">*</span></label>
+                                                <select name="blood_group" class="form-control" id="blood_group" required>
+                                                    <option value="0">Select</option>
+                                                    <option value="A+">A+</option>
+                                                    <option value="A-">A-</option>
+                                                    <option value="B+">B+</option>
+                                                    <option value="B-">B-</option>
+                                                    <option value="O+">O+</option>
+                                                    <option value="O-">O-</option>
+                                                    <option value="AB+">AB+</option>
+                                                    <option value="AB-">AB-</option>
+                                                </select>
+                                                
+                                            </div>
+                                    
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">PWD (Disability)<span class="mandate">*</span></label>
+                                                <select name="physical_status" class="form-control" id="physical_status" required>
+                                                    <option value="0">SELECT</option>
+                                                    <option value="1">YES</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Father's Name <span class="mandate">*</span></label>
+                                                <input type="text" name="father_name" value="" id="father_name" class="form-control"
+                                                    style="text-transform:uppercase" required />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Mobile Number <span class="mandate">*</span></label>
+                                                <input type="text" name="f_phone_no" value="" id="f_phone_no" class="form-control" maxlength="10"
+                                                    required />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Father's Email</label>
+                                                <input type="text" name="f_email" value="" class="form-control" style="text-transform:uppercase" />
+                                            </div>
+                                    
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Father Occupation/Business Entity</label>
+                                                <input type="text" name="f_occupation" value="" id="f_occupation" class="form-control"
+                                                    style="text-transform:uppercase" />
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Mother's Name <span class="mandate">*</span></label>
+                                                <input type="text" name="mother_name" value="" id="mother_name" class="form-control"
+                                                    style="text-transform:uppercase" required />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Mobile Number <span class="mandate">*</span></label>
+                                                <input type="text" name="m_phone_no" value="" id="m_phone_no" class="form-control" maxlength="10"
+                                                    required />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Mother's Email</label>
+                                                <input type="text" name="m_email" value="" class="form-control" style="text-transform:uppercase" />
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Mother's Occupation/Business Entity</label>
+                                                <input type="text" name="m_occupation" value="" id="m_occupation" class="form-control"
+                                                    style="text-transform:uppercase" />
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Combined Parent Annual Income<span class="mandate">*</span></label>
+                                                <select name="parents_income" class="form-control" id="parents_income" required>
+                                                    <option value="0">Choose</option>
+                                                    <option value="1">3Lakh to 5Lakh</option>
+                                                    <option value="2">5Lakh to 10Lakh</option>
+                                                    <option value="3">10Lakh to 15Lakh</option>
+                                                    <option value="4">15Lakh to 20+</option>
+                                                </select>
+                                            </div>
+                                    
+                                            <div class="form-group col-md-3">
+                                                <label class="control-label">Preferred Point of Contact<span class="mandate">*</span></label>
+                                                <select name="preferred_contact" class="form-control" id="preferred_contact" required>
+                                                    <option value="0">Select</option>
+                                                    <option value="1">FATHER</option>
+                                                    <option value="2">MOTHER</option>
+                                                    <option value="3">GUARDIAN</option>
+                                                    <option value="4">Both the Parents</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br />
+                                    
+                                    
+                                        <h5 style="color:#003a6a" href=""> <strong> Name of
+                                                the Local Guardian (With Relationship) if any, Yes
+                                                <input type="radio" value="No" id="chkYes" name="chkPassPort" required /> No
+                                                <input type="radio" value="Yes" id="chkNo" name="chkPassPort"> </strong></h5>
+                                        <!-- <div id="dvPassport" style="display:none"> -->
+                                        <div class="form-row" id="guid">
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Guardian's Name
+                                                </label>
+                                                <input type="text" name="guardian_name" value="" class="form-control" style="text-transform:uppercase" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Mobile No</label>
+                                                <input type="text" name="guardian_mobile" value="" class="form-control" maxlength="10" />
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label class="control-label">Relationship </label>
+                                                <input type="text" name="guardian_relation" value="" class="form-control"
+                                                    style="text-transform:uppercase" />
+                                            </div>
+                                        </div>
+
+<ul class="float-right">
+    <li class="list-inline-item">
+        <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+    </li>
+    <li class="list-inline-item">
+        <button type="button" class="btn btn-primary next-step" id="second_next">Next</button>
+    </li>
+</ul>
+                                        </div>
+                                    
+                                    
+
+                                    <div class="tab-pane" role="tabpanel" id="step3">
+                                        <h5 class="card-title" style="color:#001b54;">
+                                            Correspondence Address</h5>
+                                        
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label">Address Line 1 <span class="mandate">*</span></label>
+                                                    <input type="text" name="cor_addr_line1" value="" id="cor_addr_line1" class="form-control"
+                                                        style="text-transform:uppercase" required />
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label">Address Line 2 <span class="mandate">*</span></label>
+                                                    <input type="text" name="cor_addr_line2" value="" id="cor_addr_line2" class="form-control"
+                                                        style="text-transform:uppercase" required />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">Select State <span class="mandate">*</span></label>
+                                                    <select name="cor_state" class="form-control" required id="cor_state">
+                                                        <option value="" selected="selected">Select</option>
+                                                    <option value="1">Andaman and Nicobar Islands</option>
+                                                    <option value="2">Andhra Pradesh</option>
+                                                    <option value="3">Arunachal Pradesh</option>
+                                                    <option value="4">Assam</option>
+                                                    <option value="5">Bihar</option>
+                                                    <option value="6">Chandigarh</option>
+                                                    <option value="7">Chhattisgarh</option>
+                                                    <option value="8">Dadra and Nagar Haveli</option>
+                                                    <option value="9">Daman and Diu</option>
+                                                    <option value="10">Delhi</option>
+                                                    <option value="11">Goa</option>
+                                                    <option value="12">Gujarat</option>
+                                                    <option value="13">Haryana</option>
+                                                    <option value="14">Himachal Pradesh</option>
+                                                    <option value="15">Jammu and Kashmir</option>
+                                                    <option value="16">Jharkhand</option>
+                                                    <option value="17">Karnataka</option>
+                                                    <option value="18">Kenmore</option>
+                                                    <option value="19">Kerala</option>
+                                                    <option value="20">Lakshadweep</option>
+                                                    <option value="21">Madhya Pradesh</option>
+                                                    <option value="22">Maharashtra</option>
+                                                    <option value="23">Manipur</option>
+                                                    <option value="24">Meghalaya</option>
+                                                    <option value="25">Mizoram</option>
+                                                    <option value="26">Nagaland</option>
+                                                    <option value="27">Narora</option>
+                                                    <option value="28">Natwar</option>
+                                                    <option value="29">Odisha</option>
+                                                    <option value="30">Paschim Medinipur</option>
+                                                    <option value="31">Pondicherry</option>
+                                                    <option value="32">Punjab</option>
+                                                    <option value="33">Rajasthan</option>
+                                                    <option value="34">Sikkim</option>
+                                                    <option value="35">Tamil Nadu</option>
+                                                    <option value="36">Telangana</option>
+                                                    <option value="37">Tripura</option>
+                                                    <option value="38">Uttar Pradesh</option>
+                                                    <option value="39">Uttarakhand</option>
+                                                    <option value="40">Vaishali</option>
+                                                    <option value="41">West Bengal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">City <span class="mandate">*</span></label>
+                                                    <input type="text" name="cor_city" value="" id="cor_city" maxlength="30" class="form-control" required />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">Pincode <span class="mandate">*</span></label>
+                                                    <input type="text" name="cor_pincode" value="" id="cor_pincode" maxlength="6" class="form-control"
+                                                        required />
+                                                </div>
+                                    
+                                            </div>
+                                    
+                                            <div class="form-row">
+                                                <div class="card-heading">
+                                                    <h5 class="card-title" style="color:#001b54;">Permanent
+                                                        Address&nbsp;&nbsp;&nbsp;
+                                                        <label>
+                                                            <input type="checkbox" name="filltoo" id="filltoo" value=""
+                                                                onclick="filladd()" />&nbsp;&nbsp;Same
+                                                            as
+                                                            Correspondence
+                                                        </label>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                    
+                                                <h5 class="card-title" style="color:#001b54;">Permanent
+                                                    Address
+                                                </h5>
+                                    
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label">Address Line 1 <span class="mandate">*</span></label>
+                                                    <input type="text" name="addr_line1" value="" id="pre_addr_line1" class="form-control"
+                                                        style="text-transform:uppercase" required />
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label">Address Line 2 <span class="mandate">*</span></label>
+                                                    <input type="text" name="addr_line2" value="" id="pre_addr_line2" class="form-control"
+                                                        style="text-transform:uppercase" required />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">Select State <span class="mandate">*</span></label>
+                                                    <select name="state" class="form-control" required id="pre_state">
+                                                        <option value="">Select</option>
+                                                        <option value="1">Andaman and Nicobar Islands
+                                                        </option>
+                                                    <option value="1">Andaman and Nicobar Islands</option>
+                                                    <option value="2">Andhra Pradesh</option>
+                                                    <option value="3">Arunachal Pradesh</option>
+                                                    <option value="4">Assam</option>
+                                                    <option value="5">Bihar</option>
+                                                    <option value="6">Chandigarh</option>
+                                                    <option value="7">Chhattisgarh</option>
+                                                    <option value="8">Dadra and Nagar Haveli</option>
+                                                    <option value="9">Daman and Diu</option>
+                                                    <option value="10">Delhi</option>
+                                                    <option value="11">Goa</option>
+                                                    <option value="12">Gujarat</option>
+                                                    <option value="13">Haryana</option>
+                                                    <option value="14">Himachal Pradesh</option>
+                                                    <option value="15">Jammu and Kashmir</option>
+                                                    <option value="16">Jharkhand</option>
+                                                    <option value="17">Karnataka</option>
+                                                    <option value="18">Kenmore</option>
+                                                    <option value="19">Kerala</option>
+                                                    <option value="20">Lakshadweep</option>
+                                                    <option value="21">Madhya Pradesh</option>
+                                                    <option value="22">Maharashtra</option>
+                                                    <option value="23">Manipur</option>
+                                                    <option value="24">Meghalaya</option>
+                                                    <option value="25">Mizoram</option>
+                                                    <option value="26">Nagaland</option>
+                                                    <option value="27">Narora</option>
+                                                    <option value="28">Natwar</option>
+                                                    <option value="29">Odisha</option>
+                                                    <option value="30">Paschim Medinipur</option>
+                                                    <option value="31">Pondicherry</option>
+                                                    <option value="32">Punjab</option>
+                                                    <option value="33">Rajasthan</option>
+                                                    <option value="34">Sikkim</option>
+                                                    <option value="35">Tamil Nadu</option>
+                                                    <option value="36">Telangana</option>
+                                                    <option value="37">Tripura</option>
+                                                    <option value="38">Uttar Pradesh</option>
+                                                    <option value="39">Uttarakhand</option>
+                                                    <option value="40">Vaishali</option>
+                                                    <option value="41">West Bengal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">Enter City <span class="mandate">*</span></label>
+                                                <input type="text" name="pre_city" value="" id="pre_city" maxlength="30" class="form-control" required />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label">Pincode <span class="mandate">*</span></label>
+                                                    <input type="text" name="pincode" value="" id="pre_pincode" maxlength="6" class="form-control"
+                                                        required />
+                                                </div>
+                                            </div>
+                                       
+                                        <ul class="float-right">
+                                            <li class="list-inline-item">
+                                                <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+                                            </li>
+                                            
+                                            <li class="list-inline-item">
+                                                <button type="button" class="btn btn-primary btn-info-full next-step">Next</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+<div class="tab-pane" role="tabpanel" id="step4">
+   
+        <div class="form-row">
+            <div class="card-heading">
+                <h5 class="card-title" style="color:#001b54;">10<sup>th</sup> Std. Examination
+                    Details</h5>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label class="control-label">Institution Studied <span class="mandate">*</span></label>
+                <input type="text" name="X_Institution" value="" class="form-control" style="text-transform:uppercase"
+                    required />
+    
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Total % or CGPA <span class="mandate">*</span></label>
+                <input type="number" name="X_CGPA" value="" step="0.01" class="form-control" required />
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Year of Passing <span class="mandate">*</span> </label>
+                <select name="X_year" class="form-control" style="text-transform:uppercase" required>
+                    <option value="" selected="selected">Select Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+    
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="card-heading">
+                <h5 class="card-title" style="color:#001b54;">XI<sup>th </sup>Std. Examination
+                    Details</h5>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label class="control-label">Institution Studied <span class="mandate">*</span>
+                </label>
+                <input type="text" name="XI_institution" value="" class="form-control" style="text-transform:uppercase"
+                    required />
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Total % or CGPA <span class="mandate">*</span></label>
+                <input type="number" name="XI_CGPA" value="" step="0.01" class="form-control" required />
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label">Year of Passing <span class="mandate">*</span> </label>
+    
+                <select name="XI_year" class="form-control" style="text-transform:uppercase" required>
+                    <option value="" selected="selected">Select Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                </select>
+            </div>
+        </div>
+    
+    
+    <ul class="float-right">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary next-step">Next</button>
+        </li>
+    </ul>
+</div>
+
+
+<div class="tab-pane" role="tabpanel" id="step5">
+   
+        <div class="form-row">
+            <div class="card-heading">
+                <h5 class="card-title" style="color:#001b54;">Additional
+                    Information</h5>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label class="control-label">Extra Curricular Activities
+                </label>
+                <input type="text" name="extra_curricular" value="" class="form-control" style="text-transform:uppercase" />
+            </div>
+            <div class="form-group col-md-6">
+                <label class="control-label">How do you come to know
+                    about Jain (Deemed-to-be-University) <span class="mandate">*</span></label>
+                <select name="source" class="form-control" required>
+                    <option value="" selected="selected">Choose</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Website">Website</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Reference">Reference</option>
+                    <option value="Hoarding">Hoarding</option>
+                    <option value="Newspaper Advertisement">Newspaper Advertisement</option>
+                    <option value="Pamphlet">Pamphlet</option>
+                    <option value="Poster">Poster</option>
+                    <option value="Banner">Banner</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="SMS">SMS</option>
+                    <option value="E-mailer">E-mailer</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Alumni">Alumni</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Walk-in">Walk-in</option>
+                    <option value="webinar">webinar</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label class="control-label">Hostel Accommodation <span class="mandate">*</span></label>
+                <select name="hostel_accom" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label class="control-label">Have you previously applied
+                    to Jain (Deemed-to-be-University)? <span class="mandate">*</span></label>
+                <select name="previous_applied" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+          
+        </div>
+        <div class="form-row">
+<div class="form-group col-md-6">
+    <label class="control-label">Have you studied PUC at
+        Jain College?<span class="mandate">*</span></label>
+    <select name="studied_puc" class="form-control" required>
+        <option value="" selected="selected">Select</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+</div>
+<div class="form-group col-md-6">
+    <label class="control-label">Preferred Center for Jain
+        Entrance Test 2021 (JET 2021) <span class="mandate">*</span></label>
+    <select name="test_center" class="form-control" readonly="readonly" required>
+        <option value="1">BANGALORE</option>
+    </select>
+</div>
+        </div>
+    
+ 
+    <ul class="float-right">
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+        </li>
+        <li class="list-inline-item">
+            <button type="button" class="btn btn-primary next-step">Next</button>
+        </li>
+    </ul>
+</div>
+
+
+<div class="tab-pane" role="tabpanel" id="complete">
+
+    <div class="form-row">
+        <div class="input-group mb-1">
+            <label class="control-label">Photo (JPG, PNG format only
+                and size should not exceed 1 MB) <span class="mandate">*</span></label>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" name="photo" class="form-control-file border" id="apphoto" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="input-group mb-1">
+            <label class="control-label">10th Mark Sheet <span class="mandate">*</span></label>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" name="ssc_certificate" class="form-control-file border" id="appsslc" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="input-group mb-1">
+            <label class="control-label">Upload your Higher
+                Secondary / XI Standard with marks cards <span class="mandate">*</span></label>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" name="puc1_certificate" class="form-control-file border" id="apppuc" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group mb-1">
+            <label class="control-label">Higher secondary / XII
+                Standard </label>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" name="puc2_certificate" class="form-control-file border" id="apppuc" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="input-group mb-1">
+            <label class="control-label">Diploma Certificate (If
+                applicable)</label>
+        </div>
+        <div class="input-group mb-3">
+            <input type="file" name="diploma_certificate" class="form-control-file border" id="apppuc" required>
+        </div>
+    </div>
+<ul class="float-right">
+    <li class="list-inline-item">
+        <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+    </li>
+    <li class="list-inline-item">
+        <button type="button" class="btn btn-primary next-step">Submit</button>
+    </li>
+</ul>
+
+                                </div> 
+                                <!-- row end-->
+<div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        <!--container-->
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-contact">
+                    <h4>JGI Global Campus </h4>
+                    <p>
+
+                        Faculty of Engineering & Technology<br>
+                        45th km, NH - 209<br>
+                        Jakkasandra Post<br>
+                        Bangalore - Kanakapura Main Road<br>
+                        Ramanagara District - 562 112<br>
+
+                        <strong>Phone:</strong> +91 080-27577198<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>List of Programs</h4>
+                    <ul>
+
+                        <li><i class="bx bx-chevron-right"></i> <a href="#"> B-VOC - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BBA - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">PGDM - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">MBA - Real Estate</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Diploma - Real Estate</a></li>
+
+                    </ul>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+        <div class="mr-md-auto text-center text-md-left">
+            <div class="copyright">
+                &copy; Copyright <strong><span>IREU-Education</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+
+            </div>
+        </div>
+        <section id="lab_social_icon_footer">
+            <!-- Include Font Awesome Stylesheet in Header -->
+        
+        
+            <div class="my-auto text-md-right text-right">
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb"
+                        class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp"
+                        class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        
+        </section>
+    </div>
+</footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app_form.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+    <script>
+        $("#first_next").click(function(){
+            console.log("hello");
+           var pr_type= $("#prg_type").val();
+           var pr_name=$("#prg_name").val();
+
+           if(pr_type=="0" && pr_name=="0"){
+               alert("both required");
+           }
+           else if(pr_type=="0"){
+               alert("fill prg type");
+           }
+           else if(pr_name == "0")
+           {
+               alert("fill prg name");
+           }
+        });
+      $("#second_next").click(function(){
+          let fname=$("#first_name").val();
+          let lname=$("#last_name").val();
+          let email=$("email").val();
+          let dob=$("#dob").val();
+          let mobile_number=$("#mobile_number").val();
+          let gender=$("#gender").val();
+          let religion=$("#religion").val();
+          let category=$("#category").val();
+          let blood_group=$("#blood_group").val();
+          let physical_status=$("#physical_status").val();
+          let father_name=$("#father_name").val();
+          let f_phone_no=$("#f_phone_no").val();
+          let mother_name=$("#mother_name").val();
+          let m_phone_no=$("#m_phone_no").val();
+          let parents_income=$("#parents_income").val();
+          let preferred_contact=$("#preferred_contact").val();
+
+
+
+            console.log(fname);
+            if(fname=="" && lname=="" && email == "" && dob == "" && mobile_number == "" && gender == "0"&& religion == "0" && category == "0" && blood_group == "0" && physical_status == "0" && father_name && f_phone_no && mother_name && m_phone_no && parents_income == "0" && preferred_contact == "0")
+            {
+                alert("all required");
+            }
+            else if(fname==""){
+                alert("enter first name");
+            }
+            else if(lname==""){
+                 alert("enter last name");
+            }
+            else if(email==""){
+                alert("enter email");
+            }
+            else if(dob==""){
+                alert("enter dob");
+            }
+            else if(mobile_number==""){
+                alert("enter number");
+            }
+            else if(gender=="0"){
+                alert("select gender");
+            }
+            else if(religion=="0"){
+                alert("enter religion");
+            }
+            else if(category=="0"){
+                alert("enter category");
+            }
+            else if(blood_group=="0"){
+                alert("enter blood group");
+            }
+            else if(physical_status=="0"){
+                alert("enter pwd");
+            }
+            else if(father_name==""){
+                alert("enter father name");
+            }
+            else if(f_phone_no==""){
+                alert("enter father number");
+            }
+            else if(mother_name==""){
+                alert("enter mother name");
+            }
+            else if(m_phone_no==""){
+                alert("enter mother number");
+            }
+            else if(parents_income=="0"){
+                alert("enter parent income");
+            }
+            else if(preferred_contact=="0"){
+                alert("enter preffered contact");
+            }
+
+      });
+    </script>
+    <script>
+        $(document).ready(function () {
+                $("input:radio").click(function () {
+                    if ($(this).val() == "Yes") {
+                        $("#guid").hide();
+                       
+                    } else {
+                        $("#guid").show();
+                       
+                    }
+                });
+            });
+    </script>
+
+
+</body>
+
+</html>

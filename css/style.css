@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  overflow-x: hidden !important;
+}
+.home_snd1_div {
+  font-size: 18px;
+  /* border: 1px solid rgb(73, 71, 71); */
+  /* margin-top: 20px; */
+  padding: 25px;
+}
+
+/* ------------------------------------------
+home page tab
+------------------------------------------- */
+
+/* .tabbable-responsive {
+  display: block;
+  min-width: 100%;
+  overflow-x: auto;
+
+  margin: 0px -20px -13px -20px;
+} */
+
+/* .tabbable {
+  min-width: 100%;
+  .nav-tabs {
+    white-space: nowrap;
+
+    display: inline-block;
+    min-width: 100%; */
+
+/* padding: 0px 30px; */
+
+/* .nav-item {
+      display: inline-block;
+
+      .nav-link {
+        display: inline-block;
+      }
+    }
+  }
+} */
+// ----- END
+
+small {
+  font-size: 12px;
+}
+.card {
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.15);
+}
+
+.text-dark {
+  text-decoration: none !important;
+}
+li {
+  /* background-color: #194486; */
+  border-radius: 5%;
+  /* padding: 10px; */
+  margin: 5px;
+}
+li:active {
+  color: #194486;
+}
+li:hover {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+.tab_pt2 {
+  background-color: #194486;
+  color: rgb(255, 255, 255);
+  /* float: right; */
+}
+.home_trd_div {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.home_trd_div a {
+  font-weight: bold;
+}
+.tab-content {
+  color: rgb(27, 2, 2);
+  background-color: #fff;
+  padding: 0;
+}
+.tab-right-bg {
+  background: #194486;
+  /* width: 100%; */
+  position: relative;
+  padding: 0;
+}
+.study_at {
+  background-color: cornflowerblue;
+  padding: 30px 20px;
+}
+
+/* TESTIMONIALS */
+
+/* .card-img-top-200 {
+  overflow: hidden;
+  max-height: 200px;
+} */
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
+  }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
