@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class=" border-right" id="sidebar-wrapper" style="background-color:#194486;">
+            <div class="sidebar-heading" style="background-color: rgb(255, 255, 255);">IREU Admin</div>
+            <div class="list-group list-group-flush">
+                <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                    <li >
+                      <a href="#home" class="list-group-item list-group-item-action active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                            aria-selected="true">Home</a>
+                    </li>
+                    <li >
+                       <a class="list-group-item list-group-item-action" id="academics-tab" data-toggle="tab" href="#academics" role="tab" aria-controls="academics"
+                            aria-selected="false">Academics</a>
+                    </li>
+                    <li>
+                       <a  class="list-group-item list-group-item-action" id="research-tab" data-toggle="tab" href="#research" role="tab" aria-controls="research"
+                            aria-selected="false" >Research</a>
+                    </li>
+                    <li>
+                        <a  class="list-group-item list-group-item-action " id="placement-tab" data-toggle="tab" href="#placement" role="tab" aria-controls="placement"
+                            aria-selected="false" >Placements</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action " id="about-tab" data-toggle="tab" href="#about"
+                            role="tab" aria-controls="about" aria-selected="false">About Us</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container tab-content" id="myTabContent">
+                <br>
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                 <form >
+                    <div class="row">
+                    <div class="form-group col-md-6">
+                        <h6>Jain (Deemed-to-be University)</h6>
+                        <!-- <label for="exampleFormControlTextarea1">Jain (Deemed-to-be University)</label> -->
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <h6>News & Updates</h6>
+                        <!-- <label for="exampleFormControlTextarea1">News & Updates</label> -->
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </div>
+                    </div>
+                    <h5>Study at Jain</h5>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h6>UG programs overview</h6>
+                            <!-- <label for="exampleFormControlTextarea1">Jain (Deemed-to-be University)</label> -->
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="" id="inputText_ug" placeholder="UG Programs">&nbsp;<span class='a'>Add &#43;</span>
+                            <!-- <button class="a">+</button> -->
+                            <!-- <div class="row"> -->
+                                <div class="" style="overflow-y: scroll; height: 100px; width: 200px; background-color: #e1e1e1;">
+                                    <p id="showText_ug"></p>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h6>PG programs overview</h6>
+                            <!-- <label for="exampleFormControlTextarea1">Jain (Deemed-to-be University)</label> -->
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                    <div class="form-group col-md-3">
+                        <input type="text" class="" id="pg_text" placeholder="PG Programs">&nbsp;<span class='a_pg'>Add &#43;</span>
+                        <!-- <button class="a">+</button> -->
+                        <!-- <div class="row"> -->
+                        <div class="" style="overflow-y: scroll; height: 100px; width: 200px; background-color: #e1e1e1;">
+                            <p id="showText_pg"></p>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h6>Diploma Programs overview</h6>
+                            <!-- <label for="exampleFormControlTextarea1">Jain (Deemed-to-be University)</label> -->
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="" id="d_text" placeholder="Diploma Programs">&nbsp;<span class='a_diploma'>Add &#43;</span>
+                            <!-- <button class="a">+</button> -->
+                            <!-- <div class="row"> -->
+                            <div class="" style="overflow-y: scroll; height: 100px; width: 200px; background-color: #e1e1e1;">
+                                <p id="showText_d"></p>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <h5>TESTIMONIALS</h5>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="testimonials_image">Testimonials Image</label>
+                            <input type="file" class="form-control-file" id="testimonials_image">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="testimonials_title">Testimonials Name</label>
+                            <input type="text" class="form-control" id="testimonials_title" placeholder="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            
+                            <label for="testimonials_detail">Testimonials detail</label>
+                            <textarea class="form-control" id="testimonials_detail" rows="4"></textarea>
+                        </div>
+
+                    </div>
+                  <br>
+                        <button type="button" class="btn btn-success btn-lg float-right">Save</button>
+                    
+                 </form>
+                </div>
+                <div class="tab-pane fade" id="academics" role="tabpanel" aria-labelledby="academics-tab">
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="academics_overview">Academics Overview</label>
+                            <textarea class="form-control" id="academics_overview" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex;">
+                        <div class=" col-md-3">
+                            <input type="text" class="" id="acd_ug" placeholder="UG Programs">&nbsp;<span class='ug_add'>Add &#43;</span>
+                    
+                            <div class="" style="overflow-y: scroll; height: 100px; width: 200px; background-color: #e1e1e1;">
+                                <!-- <p id="showText_ug"></p> -->
+                                <a href="" id="one"></a>
+                            </div>
+                    
+                        </div>
+                        <div class=" col-md-3" style="display: none;" id="pg">
+                            <input type="text" class="" id="acd_pg" placeholder="UG Programs">&nbsp;<span class='pg_add'>Add &#43;</span>
+                    
+                            <div class="ug" style="overflow-y: scroll; height: 100px; width: 200px; background-color: #e1e1e1;">
+                                <!-- <p id="showText_ug"></p> -->
+                                <a href="" id="two"></a>
+                            </div>
+                    
+                        </div>
+                        <div class=" col-md-3" style="display: none;" id="pg1">
+                            <!-- <input type="text" class="" id="inputText_pg" placeholder="UG Programs">&nbsp;<span class='ab'>Add &#43;</span> -->
+                    
+                            <div class="ug">
+                                <!-- <p id="showText_ug"></p> -->
+                                <!-- <a href="" id="two"></a> -->
+                                <textarea name="" id="samp" cols="30" rows="10"></textarea>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
+                  
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="research_overview">Research Overview</label>
+                            <textarea class="form-control" id="research_overview" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="research_promotion">Promotion of Research</label>
+                            <textarea class="form-control" id="research_promotion" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="research_policy">Research Policy</label>
+                            <textarea class="form-control" id="research_policy" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="r4">Interdisciplinary Research</label>
+                            <textarea class="form-control" id="r4" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="research_facilities">Research Facilities</label>
+                            <textarea class="form-control" id="research_facilities" rows="4"></textarea>
+                        </div>
+                    </div>
+            
+                </div>
+                <div class="tab-pane fade" id="placement" role="tabpanel" aria-labelledby="placement-tab">
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label for="placement_overview">Placement Overview</label>
+                        <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="placement_overview">Our recruiters' requirements:</label>
+                        <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="placement_overview">Our students' approaches:</label>
+                        <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="placement_overview">Placement Testimonials title</label>
+                        <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="placement_overview">Placement Testimonials detail</label>
+                        <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label for="placement_overview">About Overview</label>
+                            <textarea class="form-control" id="placement_overview" rows="4"></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/admin_pg.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <!-- <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script> -->
+
+</body>
+
+</html>

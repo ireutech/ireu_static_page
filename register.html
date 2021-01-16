@@ -130,49 +130,56 @@
 
                 <div class="container-fluid col-lg-4 col-md-6 col-sm-12 reg_div ">
                     <h3>Registration</h3>
+                    <p id="head"></p>
                     <br>
-                    <form novalidate>
+                    <form  novalidate onsubmit="return Validate()" name="rform">
                         <div>
-                        <div class="form-group row">
+                        <div class="form-group row" id="nationality_div">
                                 <div class="col-sm-10">
-                                    <select id="std_nationality" class="form-control " required style="border-color: rgb(16 16 16); color:black; line-height: 100px; height: 50px;">
+                                    <select id="std_nationality" class="form-control " required style="border-color: rgb(16 16 16); color:black; line-height: 100px; height: 50px;" name="std_nationality">
                                         <option value="0">Select Nationality</option>
                                         <option value="a">A</option>
                                         <option value="b">B</option>
                                         <option value="c">C</option>
                                     </select>
+                                    <div id="nation_error"></div>
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row" id="username_div">
                             <div class="col-sm-10">
-                                <input type="text" class="form-control form-control-lg inputform" id="std_name" placeholder="Student Name" required>
+                                <input type="text" class="form-control form-control-lg inputform" id="std_name" placeholder="Student Name" name="std_name" required>
+                                <div id="name_error"></div>
                             </div>
                         </div>
                 
-                        <div class="form-group row">
+                        <div class="form-group row" id="email_div">
                             <div class="col-sm-10">
-                                <input type="email" class="form-control form-control-lg inputform" id="std_email" placeholder="Email" required>
+                                <input type="email" class="form-control form-control-lg inputform" id="std_email" placeholder="Email" name="std_email" required>
+                                <div id="email_error"></div>
                             </div>
                         </div>
                 
-                        <div class="form-group row">
+                        <div class="form-group row" id="mobile_div">
                             <div class="col-sm-10">
-                                <input type="text" class="form-control form-control-lg inputform" id="std_mobile_number"
+                                <input type="text" class="form-control form-control-lg inputform" id="std_mobile_number" name="std_mobile_number"
                                     placeholder="Mobile Number" required>
+                                    <div id="mobile_error"></div>
                             </div>
                         </div>
                 
-                        <div class="form-group row">
+                        <div class="form-group row" id="passwrd_div">
                             <div class="col-sm-10">
-                                <input type="password" class="form-control form-control-lg inputform" id="std_password1" placeholder="Password" required>
+                                <input type="password" class="form-control form-control-lg inputform" id="std_password1" placeholder="Password"  name="std_password1" required>
+                            
                             </div>
                         </div>
                 
-                        <div class="form-group row">
+                        <div class="form-group row" id="conf_pass_div">
                             <div class="col-sm-10">
-                                <input type="password" class="form-control form-control-lg inputform" id="std_confirm_password"
+                                <input type="password" class="form-control form-control-lg inputform" id="std_confirm_password" name="std_confirm_password"
                                     placeholder="Confirm Password" required>
+                                    <div id="password_error"></div>
                             </div>
                         </div>
                 
@@ -180,7 +187,7 @@
                         <br />
                         <div class="form-group row text-center">
                             <div class="col-sm-10">
-                                <button type="button" class="btn btn-primary btn-lg reg_btn" id="std_register">Register</button>
+                                <button type="submit" class="btn btn-primary btn-lg reg_btn" id="std_register">Register</button>
                             </div>
                         </div>
                         </div>
@@ -272,6 +279,9 @@
 
     <!-- Template Main JS File -->
     <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -281,7 +291,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script>
+<!-- <script>
   
   $(document).ready(function () {
        $("#std_register").click(function () {
@@ -291,15 +301,44 @@
            let std_mobile_number = $("#std_mobile_number").val();
            let std_password1 = $("#std_password1").val();
            let std_confirm_password = $("#std_confirm_password").val();
+           let nameRegex = /^[A-Za-z]+$/;
 
-           if (std_nationality == "0" || std_name == "" || std_email == "" || std_mobile_number == "" || std_password1 == "" || std_confirm_password == "") {
-               alert("all required")
+           if (std_nationality == "0" && std_name == "" && std_email == "" && std_mobile_number == "" && std_password1 == "" && std_confirm_password == "") {
+               alert("all required");
            }
+           else if(std_nationality=="0"){
+               alert("enter nationality");
+           } 
+           else 
+           {    if(std_name>=6)
+            {
+               alert("more than 6 letter");
+           }
+                else if (std_name !== nameRegex) {
+                   alert("invalid name")
+               }
+
+            }
+        //    else if(std_email==""){
+        //        alert("email cant be blank");
+        //    }
+        //    else if(std_mobile_number==""){
+        //         alert("num cant be blank");
+        //    }
+        //    else if(std_password1==""){
+        //         alert("pass cant be blank");
+        //    }
+        //    else if(std_confirm_password=="")
+        //    {
+        //         alert("pass1 cant be blank");
+        //    }
+
+          
+           })
        });
 
-   });
-   
-</script>
+
+</script> -->
 </body>
 
 </html>
